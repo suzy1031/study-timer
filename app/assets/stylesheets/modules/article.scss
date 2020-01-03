@@ -24,4 +24,19 @@ article.l_container {
       font-weight: bold;
     }
   }
+  .m_container.new {
+    background: #eee;
+    .input_form {
+      margin: 0 30px;
+      height: 30px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+    .input_submit {
+      height: 35px;
+      border: 1px solid gray;
+      border-radius: 4px;
+
+    }
+  }
 }

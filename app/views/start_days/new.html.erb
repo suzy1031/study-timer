@@ -1,5 +1,10 @@
-<%= form_for @start_day do |f| %>
-  <%= f.label :学習開始日, class:'hoge' %>
-  <%= f.text_field :start_day, id:'datepicker' %>
-  <%= f.submit '登録' %>
-<% end %>
+<h1 class='main_title'>今日の学習時間</h1>
+<article class='l_container'>
+  <section class='m_container new'>
+    <%= form_for @start_day do |f| %>
+      <%= f.label :学習開始日, class:'hoge' %>
+      <%= f.text_field :start_day, id:'datepicker' %>
+      <%= f.submit '登録' %>
+    <% end %>
+  </section>
+</article>
