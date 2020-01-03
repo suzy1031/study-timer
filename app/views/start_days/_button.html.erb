@@ -1,0 +1,10 @@
+<div class='button_section'>
+  <button>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'user_btn' %>
+  </button>
+  <% if @start_day.any? %>
+    <button><%= link_to '今日の学習時間を登録', new_count_time_path, class:'register_btn' %></button>
+  <% else %>
+    <button><%= link_to '学習開始日の登録', new_start_day_path, class:'register_btn' %></button>
+  <% end %>
+</div>

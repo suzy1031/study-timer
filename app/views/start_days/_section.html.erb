@@ -1,0 +1,20 @@
+<% @start_day.each do |start_day| %>
+  <div class='section'>
+    <h2 class='section__title'>あなたの学習開始日</h2>
+    <h3 class='section__time'>
+      <%= start_day.start_day.strftime("%Y年%m月%d日") %>
+    </h3>
+  </div>
+  <div class='section'>
+    <h2 class='section__title'>積み上げた日数</h2>
+    <h3 class='section__time'>
+      <%= (Date.today - start_day.start_day.to_date).to_i %>日
+    </h3>
+  </div>
+<% end %>
+<div class='section'>
+  <h2 class='section__title'>トータル学習時間</h2>
+  <h3 class='section__time'>
+    <%= @count_hour.to_f %>時間
+  </h3>
+</div>

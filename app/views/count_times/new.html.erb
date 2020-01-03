@@ -1,0 +1,5 @@
+<%= form_for @count_time do |f| %>
+  <%= f.label :今日の学習時間 %>
+  <%= f.number_field :count_hour, {} %>
+  <%= f.submit '登録' %>
+<% end %>

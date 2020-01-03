@@ -1,0 +1,15 @@
+.button_section {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  button {
+    height: 30px;
+    line-height: 25px;
+    border-radius: 8px;
+    a.user_btn, a.register_btn {
+      text-decoration: none;
+      color: black;
+      background: #fff;
+    }
+  }
+}

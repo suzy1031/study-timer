@@ -1,0 +1,27 @@
+article.l_container {
+  section.m_container {
+    margin: 20px auto;
+    padding: 10px 0 20px 0;
+    width: 300px;
+    height: auto;
+    background: white;
+    border-radius: 8px;
+    .section {
+      text-align: center;
+      &__title {
+      }
+      &__time {
+        font-size: 18px;
+      }
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    td {
+      border: solid 1px;
+      padding: 0.5em;
+      font-weight: bold;
+    }
+  }
+}
