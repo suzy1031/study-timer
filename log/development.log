@@ -7078,3 +7078,681 @@ Processing by StartDaysController#index as HTML
 Completed 200 OK in 704ms (Views: 609.2ms | ActiveRecord: 52.6ms)
 
 
+Started GET "/count_times/new" for ::1 at 2020-01-03 15:56:08 +0900
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 108ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 15:58:44 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 15:59:18 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:02:21 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:10:30 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:11:14 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:11:32 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 1 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.5ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 1[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (2.4ms)
+  [1m[36mCountTime Load (0.3ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 1 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (2.8ms)
+  Rendered start_days/_button.html.erb (0.9ms)
+  Rendered start_days/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 101ms (Views: 88.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:11:56 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 1 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.3ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 1[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (2.2ms)
+  [1m[36mCountTime Load (0.5ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 1 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (3.0ms)
+  Rendered start_days/_button.html.erb (0.7ms)
+  Rendered start_days/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 67ms (Views: 56.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:12:01 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 1 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.5ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 1[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (2.5ms)
+  [1m[36mCountTime Load (0.5ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 1 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (2.0ms)
+  Rendered start_days/_button.html.erb (0.6ms)
+  Rendered start_days/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 59ms (Views: 52.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:14:15 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:17:15 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:17:42 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:17:56 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:18:02 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:18:52 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:21:08 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    2: <article class='l_container'>
+    3: <section class='m_container'>
+    4:   <%= form_for @count_time do |f| %>
+    5:     <%= f.number_field :count_hour, {}, class:'input_form' %>
+    6:     <%= f.submit '登録' %>
+    7:   <% end %>
+    8: </section>
+  
+app/views/count_times/new.html.erb:5:in `block in _app_views_count_times_new_html_erb__995792810342071229_70093227426200'
+app/views/count_times/new.html.erb:4:in `_app_views_count_times_new_html_erb__995792810342071229_70093227426200'
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:21:20 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 305ms (Views: 301.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:21:36 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 236ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:21:53 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 198ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:22:01 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 200ms (Views: 197.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:23:49 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 309ms (Views: 304.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:23:59 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 213ms (Views: 210.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:24:58 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 88ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:25:57 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 230ms (Views: 227.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:26:04 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 241ms (Views: 236.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:26:24 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 216ms (Views: 212.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:27:11 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 216ms (Views: 214.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:30:42 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:31:09 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:31:17 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:31:34 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 249ms (Views: 244.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:32:10 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 254ms (Views: 250.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:32:19 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 209ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:32:43 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 236ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:32:51 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 212ms (Views: 208.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:33:01 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 206ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:33:15 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 238ms (Views: 234.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:33:45 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 263ms (Views: 259.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:34:05 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 231ms (Views: 229.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:34:14 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 220ms (Views: 216.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:34:22 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 219ms (Views: 215.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:35:13 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 210ms (Views: 208.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:35:28 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 238ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:35:37 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 228ms (Views: 225.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:35:46 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 235ms (Views: 231.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:36:20 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 228ms (Views: 223.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:36:35 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:36:51 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 250ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:37:26 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 225ms (Views: 221.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:37:31 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 218ms (Views: 214.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:37:38 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 222ms (Views: 219.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:37:45 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:37:57 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 250ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:38:12 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 235ms (Views: 231.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:38:47 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 1 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.9ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 1[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (5.5ms)
+  [1m[36mCountTime Load (0.4ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 1 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (2.4ms)
+  Rendered start_days/_button.html.erb (1.5ms)
+  Rendered start_days/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 116ms (Views: 100.4ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-01-03 16:38:49 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ljinIF6cr0Ri2TiuTG52nR4XOLDpLUR8VT2GT89K3ePeVpygCQZ7SzYfd758Z+crIyiCFnOAhp3s/gWDXHzfaQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:38:49 +0900
+Processing by StartDaysController#index as HTML
+  Rendering start_days/index.html.erb within layouts/application
+  Rendered start_days/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 50ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-03 16:38:53 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 77ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-01-03 16:39:00 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojDogh0gFLH1BSyS0jXkH6Qt8pDQFCTdJQLKsDA/Ir8vIeyrqtzL98uCnGcBHjrxnajd2hcs6A5/wlVIBIfPPg==", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'hoge@hoge.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojDogh0gFLH1BSyS0jXkH6Qt8pDQFCTdJQLKsDA/Ir8vIeyrqtzL98uCnGcBHjrxnajd2hcs6A5/wlVIBIfPPg==", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 211ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-01-03 16:39:20 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vqo9pdXZjRpLdXYs+WH6ZH55JkUOD/ziUaH1Y5f6q4wzuzmMYiVSXHXyxtkqSiSKR/wJD8k3MDELYWqbo0JGDQ==", "user"=>{"email"=>"fuga@fuga.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'fuga@fuga.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 164ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:39:20 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 2 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.3ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 2[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (1.9ms)
+  [1m[36mCountTime Load (0.4ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 2 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (8.5ms)
+  Rendered start_days/_button.html.erb (1.1ms)
+  Rendered start_days/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 95ms (Views: 86.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:39:23 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 62ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:40:46 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sugawarakouhei/projects/study-timer/app/views/count_times/new.html.erb:5: syntax error, unexpected keyword_class, expecting ')'
+... :count_hour, step: '0.1' class:'input_form' );@output_buffe...
+...                          ^~~~~
+/Users/sugawarakouhei/projects/study-timer/app/views/count_times/new.html.erb:5: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...tep: '0.1' class:'input_form' );@output_buffer.safe_append='
+...                              ^
+/Users/sugawarakouhei/projects/study-timer/app/views/count_times/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/sugawarakouhei/projects/study-timer/app/views/count_times/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/sugawarakouhei/projects/study-timer/app/views/count_times/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/count_times/new.html.erb:5: syntax error, unexpected keyword_class, expecting ')'
+app/views/count_times/new.html.erb:5: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/count_times/new.html.erb:7: syntax error, unexpected keyword_end, expecting ')'
+app/views/count_times/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/count_times/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:40:55 +0900
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/count_times" for ::1 at 2020-01-03 16:41:00 +0900
+Processing by CountTimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E+EDqhSmdeIfHWD7JzfMUIXwKmYuV7LquOp0pw5Ku/EZN0R28YYWOl8k5wKc0RRjgpuSjqrBj36Ot8B1VeSnLw==", "count_time"=>{"count_hour"=>"1.5"}, "commit"=>"登録"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/count_times_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[36mCountTime Create (2.1ms)[0m  [1m[32mINSERT INTO `count_times` (`count_hour`, `user_id`, `created_at`, `updated_at`) VALUES (1, 2, '2020-01-03 07:41:00', '2020-01-03 07:41:00')[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/count_times_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/count_times_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:41:00 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 2 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.5ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 2[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (2.6ms)
+  [1m[36mCountTime Load (0.4ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 2 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (2.7ms)
+  Rendered start_days/_button.html.erb (0.7ms)
+  Rendered start_days/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 75ms (Views: 68.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT GET_LOCK('108524538016861470', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDataCountHourToCountTime (20200103074431)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('108524538016861470')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('108524538016861470', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDataCountHourToCountTime (20200103074431)
+  [1m[35m (94.1ms)[0m  [1m[35mALTER TABLE `count_times` CHANGE `count_hour` `count_hour` float(24) NOT NULL[0m
+  ↳ db/migrate/20200103074431_change_data_count_hour_to_count_time.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200103074431')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('108524538016861470')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/count_times/new" for ::1 at 2020-01-03 16:48:13 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/sugawarakouhei/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CountTimesController#new as HTML
+  Rendering count_times/new.html.erb within layouts/application
+  Rendered count_times/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 90ms (Views: 65.8ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/count_times" for ::1 at 2020-01-03 16:48:16 +0900
+Processing by CountTimesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SueL2DhL4amKP3Luxc6hSxOJQVYK2Qz4vuxTbJ02njhAMcwE3WuCccoG9Rd+KHl4FOL5vo5PMWyIsee+xpiC5g==", "count_time"=>{"count_hour"=>"1.5"}, "commit"=>"登録"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/count_times_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[36mCountTime Create (2.4ms)[0m  [1m[32mINSERT INTO `count_times` (`count_hour`, `user_id`, `created_at`, `updated_at`) VALUES (1.5, 2, '2020-01-03 07:48:16', '2020-01-03 07:48:16')[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/count_times_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/count_times_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/count_times_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 16:48:16 +0900
+Processing by StartDaysController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/start_days_controller.rb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT  SUM(`count_times`.`count_hour`) FROM `count_times` WHERE `count_times`.`user_id` = 2 LIMIT 5[0m
+  ↳ app/controllers/start_days_controller.rb:6
+  Rendering start_days/index.html.erb within layouts/application
+  [1m[36mStartDay Load (0.5ms)[0m  [1m[34mSELECT `start_days`.* FROM `start_days` WHERE `start_days`.`user_id` = 2[0m
+  ↳ app/views/start_days/_section.html.erb:1
+  Rendered start_days/_section.html.erb (11.1ms)
+  [1m[36mCountTime Load (0.5ms)[0m  [1m[34mSELECT  `count_times`.* FROM `count_times` WHERE `count_times`.`user_id` = 2 ORDER BY updated_at DESC LIMIT 5[0m
+  ↳ app/views/start_days/_table.html.erb:8
+  Rendered start_days/_table.html.erb (4.9ms)
+  Rendered start_days/_button.html.erb (0.9ms)
+  Rendered start_days/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 110ms (Views: 87.0ms | ActiveRecord: 7.3ms)
+
+
