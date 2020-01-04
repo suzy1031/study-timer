@@ -8,7 +8,7 @@
     <% @count_time.each do |count_time| %>
       <tr>
         <td><%= count_time.created_at.to_date %></td>
-        <td><%= count_time.count_hour.to_f %>時間</td>
+        <td><%= count_time.count_hour %>時間</td>
       </tr>
     <% end %>
   </table>

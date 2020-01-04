@@ -1,0 +1,5 @@
+<h3 class='nickname'><%= current_user.email if signed_in? %></h3>
+<a class='duration_circle'>
+  <span>継続日数<br><%= @Durationdays %>日</span>
+</a>
+<%= render 'button' %>

@@ -1,17 +1,24 @@
-<h1 class='main_title'>あなたの学習時間</h1>
-<h3 class='nickname'><%= current_user.email if signed_in? %></h3>
-<% if signed_in? %>
-  <article class='l_container'>
-    <section class='m_container'>
-      <%= render 'section' %>
-      <%= render 'table' %>
-    </section>
-  </article>
-  <%= render 'button' %>
-<%else %>
-  <div class='button_section'>
-  <button>
-    <%= link_to 'ログイン', user_session_path, class:'user_btn' %>
-  </button>
-  </div>
-<% end %>
+<main>
+  <% if signed_in? %>
+
+    <article class='l_container'>
+      <section class='m_container'>
+        <%= render 'section' %>
+        <%= render 'table' %>
+      </section>
+    </article>
+    <aside class='m_container_right'>
+      <%= render 'aside' %>
+    </aside>
+
+  <%else %>
+
+    <h1>あなたの学習時間</h1>
+    <div class='button_section before_login'>
+      <button class='user_btn'>
+        <%= link_to 'ログイン', user_session_path, class:'user_link' %>
+      </button>
+    </div>
+
+  <% end %>
+</main>
