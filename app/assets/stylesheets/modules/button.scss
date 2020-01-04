@@ -1,15 +1,29 @@
 .button_section {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  button {
-    height: 30px;
-    line-height: 25px;
+  display: block;
+  button.register_btn {
+    width: auto;
+    height: 50px;
     border-radius: 8px;
-    a.user_btn, a.register_btn {
+    background: skyblue;
+    border: none;
+    .register_link {
       text-decoration: none;
-      color: black;
-      background: #fff;
+      color: white;
+      font-size: 18px;
     }
   }
+  button.user_btn {
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    background: #fff;
+    .user_link {
+      text-decoration: none;
+    }
+  }
+}
+.before_login {
+  margin: 10px 20px;
 }
