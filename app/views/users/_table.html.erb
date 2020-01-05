@@ -8,7 +8,8 @@
     <% @count_time.each do |count_time| %>
       <tr>
         <td><%= count_time.created_at.to_date %></td>
-        <td><%= count_time.count_hour %>時間</td>
+        <td><%= link_to edit_count_time_path(count_time), method: :get do %><%= count_time.count_hour %>時間<% end %></td>
+        <td><%= link_to '削除', count_time_path(count_time), method: :delete, data: { confirm: "本当に削除しますか?" } %></td>
       </tr>
     <% end %>
   </table>
