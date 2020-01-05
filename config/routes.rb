@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'start_days#index'
-  resources :start_days
-  resources :count_times
+  root 'users#show'
+  resources :start_days, only: [:create]
+  resources :count_times, only: [:new, :create, :edit, :update, :destroy]
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
