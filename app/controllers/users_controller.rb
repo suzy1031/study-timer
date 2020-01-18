@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       @count_time = CountTime.where(user_id: current_user.id).order('updated_at DESC').limit(5)
       @count_hour = @count_time.sum(:count_hour)
 
+      # 継続日数メソッド
       continued = CountTime.where(user_id:current_user.id)
       @Durationdays = 0
 
@@ -26,6 +27,10 @@ class UsersController < ApplicationController
           break
         end
       end
+
+      # 年毎のメソッド
+      @a_year_counts = CountTime.group("YEAR(created_at)").sum(:count_hour)
+
     end
   end
 end

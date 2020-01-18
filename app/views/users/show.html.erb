@@ -1,4 +1,7 @@
 <main>
+  <% @a_year_counts.each do |key,value| %>
+    <%= "#{key}"%>:<%="#{value}" %>
+  <% end %>
   <% if signed_in? %>
 
     <article class='l_container'>

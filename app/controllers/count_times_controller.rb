@@ -1,4 +1,5 @@
 class CountTimesController < ApplicationController
+  before_action :set_count_time, only: [:edit, :update, :destroy]
 
   def new
     @count_time = CountTime.new
@@ -14,20 +15,19 @@ class CountTimesController < ApplicationController
   end
 
   def edit
-    @count_time = CountTime.find(params[:id])
   end
 
   def update
-    @count_time = CountTime.find(params[:id])
-    if @count_time.update(count_time_params)
-      redirect_to :root
-    else
-      render :edit
+    if @count_time.user_id == current_user.id
+      if @count_time.update(count_time_params)
+        redirect_to :root
+      else
+        render :edit
+      end
     end
   end
 
   def destroy
-    @count_time = CountTime.find(params[:id])
     if @count_time.destroy
       redirect_to :root
     else
@@ -41,4 +41,7 @@ class CountTimesController < ApplicationController
     params.require(:count_time).permit(:count_hour).merge(user_id: current_user.id)
   end
 
+  def set_count_time
+    @count_time = CountTime.find(params[:id])
+  end
 end
