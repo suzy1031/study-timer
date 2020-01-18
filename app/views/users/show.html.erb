@@ -1,7 +1,17 @@
 <main>
-  <% @a_year_counts.each do |key,value| %>
-    <%= "#{key}"%>:<%="#{value}" %>
-  <% end %>
+  <% if Time.now.sunday? %>
+    10hour
+  <%elsif Time.now.saturday? && if @yesterday_study_hour >= 3 %>
+    今日の学習時間は8時間です!<br>
+    目標達成！
+    <% else %>
+      今日の学習時間は8時間です!<br>
+      昨日は<%= 3 - @yesterday_study_hour %>時間足りませんでした！<br>
+      今日は頑張りましょう！
+    <% end %>
+  <%else%>
+    3hour
+  <%end%>
   <% if signed_in? %>
 
     <article class='l_container'>
@@ -12,6 +22,19 @@
     </article>
     <aside class='m_container_right'>
       <%= render 'users/aside' %>
+      <div class='year_count_table'>
+        <h3>年ごとの合計学習時間</h2>
+        <table>
+          <th>年</th>
+          <th>合計時間</th>
+          <% @a_year_counts.each do |key,value| %>
+            <tr>
+              <td><%= key %></td>
+              <td><%= "#{value.to_s(:delimited, delimiter: ',')}時間" %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </aside>
 
   <%else %>

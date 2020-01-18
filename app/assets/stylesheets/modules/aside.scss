@@ -24,4 +24,24 @@
     font-weight: bold;
     color: white;
   }
+  table {
+    border-collapse: collapse;
+    margin:  auto;
+  }
+  td {
+    border: solid 1px;
+    padding: 0.5em;
+    font-weight: bold;
+  }
+  .year_count_table {
+    padding-bottom: 15px;
+    width: 300px;
+    height: auto;
+    background: white;
+    border-radius: 8px;
+    h3 {
+      margin: 5px;
+      padding: 5px;
+    }
+  }
 }
