@@ -28,8 +28,14 @@ class UsersController < ApplicationController
         end
       end
 
-      # 年毎のメソッド
+      # 年毎に合計するメソッド
       @a_year_counts = CountTime.group("YEAR(created_at)").sum(:count_hour)
+
+      @yesterday = CountTime.where("DATE(created_at) = ?", Date.today-1)
+      @yesterday_study_hour = 0
+      @yesterday.each do |study|
+        @yesterday_study_hour += study.count_hour
+      end
 
     end
   end
