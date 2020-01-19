@@ -1,0 +1,63 @@
+<h2 class="progress_title">今週の進捗</h2>
+<div class="progress" style="height: 20px;">
+  <div id="answer_progress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    <%= @percent_in_week.round(1) %>%
+  </div>
+</div>
+<div class="progress_percent_in_week">
+  <a class="progress_a_week_counts"><%= @a_week_counts %>/<%= @total_study_time_in_week %>時間</a>
+  あなたの進捗は<%= @percent_in_week.round(1) %>パーセントです。
+</div>
+<% if Time.now.sunday? %>
+  <div class='header_notice'>
+    <% if @yesterday_study_hour >= @day_of_week[:holiday] %>
+      <div class='header_notice__letter'>
+        <p>今日の学習時間は<a><%= @day_of_week[:holiday] %></a>時間です!</p>
+        <p>目標達成!</p>
+      </div>
+    <% else %>
+      <div class='header_notice__letter'>
+        <p>今日の学習時間は<a><%= @day_of_week[:holiday] %></a>時間です!</p>
+        <p>昨日は<a><%= @day_of_week[:holiday] - @yesterday_study_hour %></a>時間足りませんでした！</p>
+        <p>今日は頑張りましょう！</p>
+      </div>
+    <% end %>
+  </div>
+<% elsif Time.now.saturday? && if @yesterday_study_hour >= @day_of_week[:weekday] %>
+  <div class='header_notice__letter'>
+    <p>今日の学習時間は<a><%= @day_of_week[:holiday] %></a>時間です!</p>
+    <p>目標達成！</p>
+  </div>
+  <% else %>
+    <div class='header_notice__letter'>
+      <p>今日の学習時間は<%= @day_of_week[:holiday] %>時間です!</p>
+      <p>昨日は<a><%= @day_of_week[:weekday] - @yesterday_study_hour %></a>時間足りませんでした！</p>
+      <p>今日は頑張りましょう！</p>
+    </div>
+  <% end %>
+<% elsif Time.now.monday? && if @yesterday_study_hour >= @day_of_week[:holiday] %>
+  <div class='header_notice__letter'>
+    <p>今日の学習時間は<a><%= @day_of_week[:weekday] %></a>時間です!</p>
+    <p>目標達成！</p>
+  </div>
+  <% else %>
+    <div class='header_notice__letter'>
+      <p>今日の学習時間は<a><%= @day_of_week[:weekday] %></a>時間です!</p>
+      <p>昨日は<a><%= @day_of_week[:holiday] - @yesterday_study_hour %></a>時間足りませんでした！</P>
+      <p>今日は頑張りましょう！</p>
+    </div>
+  <% end %>
+<%else%>
+  <% if @yesterday_study_hour >= @day_of_week[:weekday] %>
+    <div class='header_notice__letter'>
+      <p>今日の学習時間は<a><%= @day_of_week[:weekday] %></a>時間です!</p>
+      <p>目標達成!</p>
+    </div>
+  <% else %>
+    <div class='header_notice__letter'>
+      <p>今日の学習時間は<a><%= @day_of_week[:weekday] %></a>時間です!<p>
+      <p>昨日は<a><%= @day_of_week[:weekday] - @yesterday_study_hour %></a>時間足りませんでした！</p>
+      <p>今日は頑張りましょう！</p>
+    </div>
+  <% end %>
+<%end%>

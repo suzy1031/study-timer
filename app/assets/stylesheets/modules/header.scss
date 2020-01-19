@@ -1,0 +1,28 @@
+header {
+  width: 500px;
+  margin: 0 auto;
+  h2.progress_title  {
+    text-align: center;
+  }
+  a.progress_a_week_counts {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  .progress_percent_in_week {
+    text-align: center;
+  }
+  .header_notice {
+    background: #eee;
+    border-radius: 8px;
+    margin: 5px 0;
+    &__letter {
+      padding: 5px;
+      text-align: center;
+      a {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}
