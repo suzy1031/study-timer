@@ -16,5 +16,6 @@
 //= require pickadate/picker
 //= require pickadate/picker.date
 //= require pickadate/picker.time
+//= require bootstrap
 //= require jquery_ujs
 //= require_tree .
