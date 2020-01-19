@@ -1,19 +1,8 @@
+<header>
+  <%= render 'users/header' %>
+</header>
 <main>
-  <% if Time.now.sunday? %>
-    10hour
-  <%elsif Time.now.saturday? && if @yesterday_study_hour >= 3 %>
-    今日の学習時間は8時間です!<br>
-    目標達成！
-    <% else %>
-      今日の学習時間は8時間です!<br>
-      昨日は<%= 3 - @yesterday_study_hour %>時間足りませんでした！<br>
-      今日は頑張りましょう！
-    <% end %>
-  <%else%>
-    3hour
-  <%end%>
-  <% if signed_in? %>
-
+  <div class='container'>
     <article class='l_container'>
       <section class='m_container'>
         <%= render 'users/section' %>
@@ -36,15 +25,5 @@
         </table>
       </div>
     </aside>
-
-  <%else %>
-
-    <h1>あなたの学習時間</h1>
-    <div class='button_section before_login'>
-      <button class='user_btn'>
-        <%= link_to 'ログイン', user_session_path, class:'user_link' %>
-      </button>
-    </div>
-
-  <% end %>
+  </div>
 </main>
