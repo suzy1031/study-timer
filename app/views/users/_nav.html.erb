@@ -1,0 +1,15 @@
+<div class='header_notice'>
+  <div class='header_notice__letter'>
+    <% if Time.now.saturday? %>
+      <%= controller.saturday_goal %>
+    <% elsif Time.now.sunday? %>
+      <%= controller.sunday_goal %>
+    <% elsif Time.now.monday? %>
+      <%= controller.monday_goal %>
+    <% else %>
+      <%= controller.otherDay_goal %>
+    <% end %>
+    <p>先週の学習時間は<%= controller.last_week_counts %>時間でした!</p>
+    <p><%= controller.performance_this_year %></p>
+  </div>
+</div>
