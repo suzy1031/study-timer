@@ -12,17 +12,4 @@ header {
   .progress_percent_in_week {
     text-align: center;
   }
-  .header_notice {
-    background: #eee;
-    border-radius: 8px;
-    margin: 5px 0;
-    &__letter {
-      padding: 5px;
-      text-align: center;
-      a {
-        font-weight: bold;
-        font-size: 18px;
-      }
-    }
-  }
 }
