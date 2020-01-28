@@ -1,6 +1,9 @@
 <header>
   <%= render 'users/header' %>
 </header>
+<nav>
+  <%= render 'users/nav' %>
+</nav>
 <main>
   <div class='container'>
     <article class='l_container'>
@@ -16,7 +19,7 @@
         <table>
           <th>年</th>
           <th>合計時間</th>
-          <% @a_year_counts.each do |key,value| %>
+          <% controller.a_year_counts.each do |key,value| %>
             <tr>
               <td><%= key %></td>
               <td><%= "#{value.to_s(:delimited, delimiter: ',')}時間" %></td>
