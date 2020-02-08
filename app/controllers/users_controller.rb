@@ -14,9 +14,9 @@ class UsersController < ApplicationController
     @yesterday.each do |study|
       @yesterday_study_hour += study.count_hour
     end
-    @word = {:nonClear => "今日は頑張りましょう !", :clear => "目標達成!"}
+    @word = {:nonClear => "今日は頑張りましょう !", :clear => "昨日は目標達成!"}
     # 平日と休日の勉強時間をハッシュでセットする
-    @day_of_week = {:weekday => 3, :holiday => 8}
+    @day_of_week = {:weekday => 3, :holiday => 5}
     @weekday_result = @day_of_week[:weekday] - @yesterday_study_hour
     @holiday_result = @day_of_week[:holiday] - @yesterday_study_hour
   end
@@ -82,7 +82,7 @@ class UsersController < ApplicationController
   def saturday_goal
     # @weekday_result = @day_of_week[:weekday] - @yesterday_study_hour
     if @yesterday_study_hour >= @day_of_week[:weekday]
-      "今日の学習時間は#{@day_of_week[:holiday]}時間です！#{@word[:clear]}"
+      "#{@word[:clear]}今日の学習時間は#{@day_of_week[:holiday]}時間です！"
     else
       "今日の学習時間は#{@day_of_week[:holiday]}時間です！昨日は#{@weekday_result}時間足りませんでした！#{@word[:nonClear]}"
     end
@@ -91,7 +91,7 @@ class UsersController < ApplicationController
   def sunday_goal
     # @holiday_result = @day_of_week[:holiday] - @yesterday_study_hour
     if @yesterday_study_hour >= @day_of_week[:holiday]
-      "今日の学習時間は#{@@day_of_week[:holiday]}時間です！#{@word[:clear]}"
+      "#{@word[:clear]}今日の学習時間は#{@@day_of_week[:holiday]}時間です！"
     else
       "今日の学習時間は#{@day_of_week[:holiday]}時間です！昨日は#{@holiday_result}時間足りませんでした！#{@word[:nonClear]}"
     end
@@ -100,7 +100,7 @@ class UsersController < ApplicationController
   def monday_goal
     # @holiday_result = @day_of_week[:holiday] - @yesterday_study_hour
     if @yesterday_study_hour >= @day_of_week[:holiday]
-      "今日の学習時間は#{@@day_of_week[:weekday]}時間です#{@word[:clear]}"
+      "#{@word[:clear]}今日の学習時間は#{@@day_of_week[:weekday]}時間です"
     else
       "今日の学習時間は#{@day_of_week[:weekday]}時間です！昨日は#{@holiday_result}時間足りませんでした！#{@word[:nonClear]}"
     end
@@ -109,7 +109,7 @@ class UsersController < ApplicationController
   def otherDay_goal
     # @weekday_result = @day_of_week[:weekday] - @yesterday_study_hour
     if @yesterday_study_hour >= @day_of_week[:weekday]
-      "今日の学習時間は#{@day_of_week[:weekday]}時間です！#{@word[:clear]}"
+      "#{@word[:clear]}今日の学習時間は#{@day_of_week[:weekday]}時間です！"
     else
       "今日の学習時間は#{@day_of_week[:weekday]}時間です！昨日は#{@weekday_result}時間足りませんでした！#{@word[:nonClear]}"
     end
