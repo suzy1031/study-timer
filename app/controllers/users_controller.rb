@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @start_day = StartDay.where(user_id: current_user.id)
     # ログインユーザーのレコードを取得する
     @current_user = CountTime.where(user_id: current_user.id)
+    @today_count_time = @current_user.limit(1)
     @count_time = @current_user.get_user_time_desc_5
     @count_hour = @count_time.sum(:count_hour)
     # 昨日の学習時間を計算するメソッド
@@ -91,7 +92,7 @@ class UsersController < ApplicationController
   def sunday_goal
     # @holiday_result = @day_of_week[:holiday] - @yesterday_study_hour
     if @yesterday_study_hour >= @day_of_week[:holiday]
-      "#{@word[:clear]}今日の学習時間は#{@@day_of_week[:holiday]}時間です！"
+      "#{@word[:clear]}今日の学習時間は#{@day_of_week[:holiday]}時間です！"
     else
       "今日の学習時間は#{@day_of_week[:holiday]}時間です！昨日は#{@holiday_result}時間足りませんでした！#{@word[:nonClear]}"
     end
