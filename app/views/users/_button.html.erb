@@ -1,11 +1,17 @@
 <div class='button_section'>
-  <button class='register_btn'>
-    <% if @start_day.any? %>
-      <%= link_to '今日の学習時間を登録', new_count_time_path, class:'register_link' %>
+  <% if @start_day.any? %>
+    <% if @count_time[0].created_at.strftime("%Y年%m月%d日") == Date.current.strftime("%Y年%m月%d日") %>
+      <input type="button" class="btn btn-secondary" value="登録済み" disabled>
     <% else %>
-      <%= link_to '学習開始日の登録', new_start_day_path, class:'register_link' %>
+      <div class='register_btn'>
+        <%= link_to '今日の学習時間を登録', new_count_time_path, class:'register_link' %>
+      </div>
     <% end %>
-  </button>
+  <% else %>
+    <button class='user_btn'>
+      <%= link_to '学習開始日の登録', new_start_day_path, class:'register_link' %>
+    </button>
+  <% end %>
   <button class='user_btn'>
     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:'user_link' %>
   </button>
