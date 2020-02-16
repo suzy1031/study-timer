@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-ja
 //= require pickadate/picker
 //= require pickadate/picker.date
 //= require pickadate/picker.time
-//= require bootstrap
 //= require jquery_ujs
 //= require_tree .
